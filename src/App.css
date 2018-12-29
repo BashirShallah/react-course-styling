@@ -4,3 +4,9 @@
 .red {
   background: red;
 }
+.whiteText{
+  color: #fff;
+}
+.boldText{
+  font-weight: bold;
+}

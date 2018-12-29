@@ -2,26 +2,32 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
-  state = {
-    active: true
-  }
-
   render() {
-    const style = {color:'white', 'font-weight': 'bold'};
+    // using string variable
+    let classes = '';
+    
+    if(true)
+      classes += 'green ';
+    if(true)
+      classes += 'whiteText ';
+    if(true)
+      classes += 'boldText ';
 
-    if(this.state.active){
-      style.color = 'blue';
-    }
+    // using array variable
+    classes = [];
+    
+    if(true)
+      classes.push('green');
+    if(true)
+      classes.push('whiteText');
+    if(true)
+      classes.push('boldText');
 
     return (
       <div>
-        <div className={this.state.active ? 'green': 'red'} style={style}>
-          Test 
+        <div className={classes.join(' ')}>
+          TEST
         </div>
-
-        <button onClick={()=>{this.setState({active: ! this.state.active})}}>
-          change active
-        </button>
       </div>
     );
   }
